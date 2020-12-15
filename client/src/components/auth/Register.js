@@ -106,7 +106,7 @@ class Register extends Component {
                 <input
                   type="password"
                   id="password"
-                  placeholder="Enter Email here"
+                  placeholder="Enter Password here"
                   required
                   className={classnames("form-control", {
                     invalid: errors.password,
