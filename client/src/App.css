@@ -1,0 +1,45 @@
+body {
+  padding-top: 70px;
+}
+.show > .dropdown-menu {
+  display: block;
+  position: absolute;
+}
+.jumbotron-fluid {
+  width: 1110px;
+  height: 300px;
+  background-color: rgb(226, 185, 108);
+  align-content: center;
+}
+.jumbotron-expense {
+  width: 1110px;
+  height: 300px;
+  background-color: rgb(226, 136, 108);
+  align-content: center;
+}
+
+.jumbotron-bill {
+  width: 1110px;
+  height: 200px;
+  background-color: rgb(226, 204, 108);
+  align-content: center;
+}
+
+.jumbotron-income {
+  width: 1110px;
+  height: 300px;
+  background-color: rgb(147, 163, 233);
+  align-content: center;
+}
+
+.jumbotron-dashboard {
+  background-color: rgb(209, 250, 212);
+}
+
+.display-4 {
+  font-style: italic;
+}
+
+.navbar-brand{
+  font-style: italic; 
+}
