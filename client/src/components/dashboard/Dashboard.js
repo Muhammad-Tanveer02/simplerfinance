@@ -33,7 +33,6 @@ class Dashboard extends Component {
                 <img class="income-img-top" src={incomeImage} alt=""></img>
                 <div class="card-body">
                   <h4 class="card-title">Manage Income</h4>
-                  <p class="card-text">Some corny stuff about income lol</p>
                 </div>
                 <div class="card-footer">
                   <a href="/income" class="btn btn-success">
@@ -48,7 +47,6 @@ class Dashboard extends Component {
                 <img class="bills-img-top" src={billsImage} alt=""></img>
                 <div class="card-body">
                   <h4 class="card-title">Manage Bills</h4>
-                  <p class="card-text">Some corny stuff about bills.</p>
                 </div>
                 <div class="card-footer">
                   <a href="/bills" class="btn btn-success">
@@ -63,7 +61,6 @@ class Dashboard extends Component {
                 <img class="card-img-top" src={expensesImage} alt=""></img>
                 <div class="card-body">
                   <h4 class="card-title">Manage Expenses</h4>
-                  <p class="card-text">Some corny stuff about expenses.</p>
                 </div>
                 <div class="card-footer">
                   <a href="/expenses" class="btn btn-success">
