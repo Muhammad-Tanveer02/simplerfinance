@@ -62,10 +62,10 @@ class Register extends Component {
             </p>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
               <h4>
-                <b>Register</b> below
+                <b>Complete Your Registration Below!</b>
               </h4>
               <p className="grey-text text-darken-1">
-                Already have an account? <Link to="/login">Log in</Link>
+                Have an account already?<Link to="/login">Log in here!</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
