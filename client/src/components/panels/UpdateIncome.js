@@ -195,7 +195,7 @@ class UpdateIncome extends Component {
                 <span className="text-danger">{errors.incomeTerm}</span>
               </div>
               <div className="form-group">
-                <label>Amount (Before Taxes)</label>
+                <label>Amount ($, Before Taxes</label>
                 <input
                   type="incomeAmount"
                   id="incomeAmount"
