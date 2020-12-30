@@ -122,7 +122,7 @@ class Register extends Component {
                 <input
                   type="password"
                   id="confirmPassword"
-                  placeholder="Re-Enter your password here"
+                  placeholder="Re-Enter your Password here"
                   required
                   className={classnames("form-control", {
                     invalid: errors.confirmPassword,
