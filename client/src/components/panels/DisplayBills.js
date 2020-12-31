@@ -71,7 +71,7 @@ class BillsList extends Component {
               <h2 className="lead text-center">is your Bill Total.</h2>
             </div>
             <table className="table table-striped">
-              <thead className="thead-dark">
+              <thead className="thead-dark text-center">
                 <tr>
                   <th>Name of Bill</th>
                   <th>Type of Bill</th>
