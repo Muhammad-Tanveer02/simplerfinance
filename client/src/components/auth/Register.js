@@ -25,11 +25,11 @@ class Register extends Component {
     }
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.errors !== prevProps.errors) {
-      this.setState({ errors: this.props.errors });
+    componentDidUpdate(prevProps) {
+      if (this.props.errors !== prevProps.errors) {
+        this.setState({ errors: this.props.errors });
+      }
     }
-  }
 
   onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });

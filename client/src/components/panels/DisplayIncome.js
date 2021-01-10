@@ -108,13 +108,13 @@ class IncomeDisplay extends Component {
             <h3 className="text-center">Your Current Income(s)</h3>
             <div class="jumbotron jumbotron-income">
               <h1 className="display-4 text-center">
-                $ {this.state.thirtyIncomeTotal}
+                $ {(this.state.thirtyIncomeTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
               </h1>
               <h2 className="lead text-center">
                 is your Total Income before taxes (next 30 days).
               </h2>
               <h1 className="display-4 text-center">
-                $ {this.state.yearlyIncomeTotal}
+                $ {(this.state.yearlyIncomeTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
               </h1>
               <h2 className="lead text-center">
                 is your Total Income before taxes (next year).
@@ -154,7 +154,7 @@ const Income = (props) => (
     <td className="text-center">{props.income.incomeSource}</td>
     <td className="text-center">{props.income.incomeInstitution}</td>
     <td className="text-center">{props.income.incomeTerm}</td>
-    <td className="text-center">{"$ " + props.income.incomeAmount}</td>
+    <td className="text-center">{"$ " + (props.income.incomeAmount).toLocaleString(undefined, {maximumFractionDigits:2})}</td>
     <td>
       <Link
         to={"/income/update/" + props.income._id}

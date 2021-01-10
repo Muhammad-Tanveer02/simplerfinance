@@ -19,13 +19,13 @@ class Navbar extends Component {
     if (window.location.pathname === "/") return null;
     return (
       <div className="navbar-fixed">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-          <div class="container">
-            <a class="navbar-brand" href="/dashboard">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <div className="container">
+            <a className="navbar-brand" href="/dashboard">
               simplerFINANCE
             </a>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-toggle="collapse"
               data-target="#navbarResponsive"
@@ -33,41 +33,41 @@ class Navbar extends Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/income">
+            <div className="collapse navbar-collapse" id="navbarResponsive">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item active">
+                  <a className="nav-link" href="/income">
                     Manage Income
-                    <span class="sr-only">(current)</span>
+                    <span className="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/bills">
+                <li className="nav-item active">
+                  <a className="nav-link" href="/bills">
                     Manage Bills
-                    <span class="sr-only">(current)</span>
+                    <span className="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/expenses">
+                <li className="nav-item active">
+                  <a className="nav-link" href="/expenses">
                     Manage Exepenses
-                    <span class="sr-only">(current)</span>
+                    <span className="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="nav-item active">
+                <li className="nav-item active">
                   <a
-                    class="nav-link"
+                    className="nav-link"
                     href={
                       "users/update/" + jwt_decode(localStorage.jwtToken).id
                     }
                   >
                     Manage Account
-                    <span class="sr-only">(current)</span>
+                    <span className="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/#" onClick={this.onLogout}>
+                <li className="nav-item">
+                  <a className="nav-link" href="/#" onClick={this.onLogout}>
                     Log Out
                   </a>
                 </li>

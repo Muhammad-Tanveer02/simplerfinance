@@ -108,13 +108,13 @@ class ExpensesDisplay extends Component {
             <h3 className="text-center">Your Current Expenses</h3>
             <div class="jumbotron jumbotron-expense">
               <h1 className="display-4 text-center">
-                $ {this.state.thirtyExpenseTotal}
+                $ {(this.state.thirtyExpenseTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
               </h1>
               <h2 className="lead text-center">
                 are your Total Expenses (next 30 days).
               </h2>
               <h1 className="display-4 text-center">
-                $ {this.state.yearlyExpenseTotal}
+                $ {(this.state.yearlyExpenseTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
               </h1>
               <h2 className="lead text-center">
                 are your Total Expenses (next year).
@@ -123,7 +123,7 @@ class ExpensesDisplay extends Component {
             <table className="table table-striped">
               <thead className="thead-dark">
                 <tr>
-                  <th>Name of Expense</th>
+                  <th class="align-middle">Name of Expense</th>
                   <th>Type of Expense</th>
                   <th>Company Owed</th>
                   <th>Amount Due ($)</th>
@@ -155,7 +155,7 @@ const Expenses = (props) => (
     <td className="text-center">{props.expense.expenseName}</td>
     <td className="text-center">{props.expense.expenseType}</td>
     <td className="text-center">{props.expense.expenseCompany}</td>
-    <td className="text-center">{"$ " + props.expense.expenseAmount}</td>
+    <td className="text-center">{"$ " + (props.expense.expenseAmount).toLocaleString(undefined, {maximumFractionDigits:2})}</td>
     <td className="text-center">{props.expense.expenseTerm}</td>
     <td>
       <Link

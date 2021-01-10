@@ -42,7 +42,7 @@ class BillsList extends Component {
     this.setState({
       bills: this.state.bills.filter((el) => el._id !== billId),
     });
-    window.location.reload();
+    window.location.reload();//refresed to complete deletion
   }
 
   billList() {
@@ -66,12 +66,12 @@ class BillsList extends Component {
             <h3 className="text-center">Your Current Bills</h3>
             <div class="jumbotron jumbotron-bill">
               <h1 className="display-4 text-center">
-                $ {this.state.billTotal}
+                $ {(this.state.billTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
               </h1>
               <h2 className="lead text-center">is your Bill Total.</h2>
             </div>
             <table className="table table-striped">
-              <thead className="thead-dark text-center">
+              <thead className="thead-dark">
                 <tr>
                   <th>Name of Bill</th>
                   <th>Type of Bill</th>
