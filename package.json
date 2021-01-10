@@ -7,7 +7,7 @@
   "description": "MERN Finance Tracker",
   "main": "server.js",
   "scripts": {
-    "client-install":"cd client && npm install",
+    "client-install": "cd client && npm install",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "cd client && npm start",
@@ -49,5 +49,4 @@
   "devDependencies": {
     "nodemon": "^2.0.6"
   }
-
 }

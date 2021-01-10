@@ -103,7 +103,7 @@ class AddIncomes extends Component {
         <div className="row">
           <div className="col s8 offset-s2">
             <p>
-              <a href="/expenses" type="button" class="btn btn-primary">
+              <a href="/income" type="button" class="btn btn-primary">
                 {" "}
                 View My Income(s)
               </a>
