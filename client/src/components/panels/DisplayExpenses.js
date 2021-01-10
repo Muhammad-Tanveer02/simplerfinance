@@ -106,19 +106,21 @@ class ExpensesDisplay extends Component {
         <div className="row">
           <div className="col s8 offset-s2">
             <h3 className="text-center">Your Current Expenses</h3>
-            <div class="jumbotron jumbotron-expense">
-              <h1 className="display-4 text-center">
-                $ {(this.state.thirtyExpenseTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
-              </h1>
-              <h2 className="lead text-center">
-                are your Total Expenses (next 30 days).
-              </h2>
-              <h1 className="display-4 text-center">
-                $ {(this.state.yearlyExpenseTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
-              </h1>
-              <h2 className="lead text-center">
-                are your Total Expenses (next year).
-              </h2>
+            <div className="jumbotron jumbotron-expense">
+              <div className = "expense-text">
+                <h1 className="display-4 text-center">
+                  $ {(this.state.thirtyExpenseTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
+                </h1>
+                <h2 className="lead text-center">
+                  are your Total Expenses (next 30 days).
+                </h2>
+                <h1 className="display-4 text-center">
+                  $ {(this.state.yearlyExpenseTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
+                </h1>
+                <h2 className="lead text-center">
+                  are your Total Expenses (next year).
+                </h2>
+              </div>
             </div>
             <table className="table table-striped">
               <thead className="thead-dark">

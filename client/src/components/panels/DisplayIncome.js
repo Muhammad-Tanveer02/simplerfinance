@@ -106,19 +106,21 @@ class IncomeDisplay extends Component {
         <div className="row">
           <div className="col s8 offset-s2">
             <h3 className="text-center">Your Current Income(s)</h3>
-            <div class="jumbotron jumbotron-income">
-              <h1 className="display-4 text-center">
-                $ {(this.state.thirtyIncomeTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
-              </h1>
-              <h2 className="lead text-center">
-                is your Total Income before taxes (next 30 days).
-              </h2>
-              <h1 className="display-4 text-center">
-                $ {(this.state.yearlyIncomeTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
-              </h1>
-              <h2 className="lead text-center">
-                is your Total Income before taxes (next year).
-              </h2>
+            <div className="jumbotron jumbotron-income">
+              <div className="income-text">
+                <h1 className="display-4 text-center">
+                  $ {(this.state.thirtyIncomeTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
+                </h1>
+                <h2 className="lead text-center">
+                  is your Total Income before taxes (next 30 days).
+                </h2>
+                <h1 className="display-4 text-center">
+                  $ {(this.state.yearlyIncomeTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
+                </h1>
+                <h2 className="lead text-center">
+                  is your Total Income before taxes (next year).
+                </h2>
+              </div>
             </div>
             <table className="table table-striped">
               <thead className="thead-dark">

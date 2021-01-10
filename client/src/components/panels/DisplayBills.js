@@ -64,11 +64,13 @@ class BillsList extends Component {
         <div className="row">
           <div className="col s8 offset-s2">
             <h3 className="text-center">Your Current Bills</h3>
-            <div class="jumbotron jumbotron-bill">
-              <h1 className="display-4 text-center">
-                $ {(this.state.billTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
-              </h1>
-              <h2 className="lead text-center">is your Bill Total.</h2>
+            <div className="jumbotron jumbotron-bill">
+              <div className="bill-text">
+                <h1 className="display-4 text-center">
+                  $ {(this.state.billTotal).toLocaleString(undefined, {maximumFractionDigits:2})}
+                </h1>
+                <h2 className="lead text-center">is your Bill Total.</h2>
+              </div>
             </div>
             <table className="table table-striped">
               <thead className="thead-dark">

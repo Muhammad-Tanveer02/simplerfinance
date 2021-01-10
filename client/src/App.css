@@ -14,28 +14,40 @@ body {
 .jumbotron-expense {
   margin-top: 20px;
   width: 100%;
-  height: 50%;
   background-color: rgb(235, 207, 157);
   border:2px solid orange;
   align-content: center;
 }
 
+.expense-text{
+  margin-top: -20px;
+  margin-bottom: 2px;
+}
+
 .jumbotron-bill {
   margin-top: 20px;
   width: 100%;
-  height: 37%;
   background-color: rgb(248, 200, 188);
   border:2px solid red;
   align-content: center;
 }
 
+.expense-text{
+  margin-top: -20px;
+  margin-bottom: 2px;
+}
+
 .jumbotron-income {
   margin-top: 20px;
   width: 100%;
-  height: 55%;
   background-color: rgb(190, 201, 252);
   border:2px solid blue;
   align-content: center;
+}
+
+.expense-text{
+  margin-top: -20px;
+  margin-bottom: 2px;
 }
 
 .jumbotron-dashboard {
