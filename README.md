@@ -21,4 +21,4 @@ Once you have created a registered account, simply use the tabs on the navigatio
 
 Simpler Finance is currently live at https://simpler-finance-tanveer.herokuapp.com/
 
-If you would like to deploy it personally to your local computer, a MongoDB Atlast CLuster will be needed. You will need to set the environment variables MONGO_URI, PRIVATE_KEY, and PORT.
+If you would like to deploy it personally to your local computer, a MongoDB Atlast Cluster will be needed. You will need to set the environment variables MONGO_URI, PRIVATE_KEY, and PORT.
