@@ -55,6 +55,13 @@ body {
   border:2px solid green;
 }
 
+.update-text{
+  color: red;
+  margin-bottom: 14px;
+  margin-top: -14px;
+  text-align: center;
+}
+
 .display-4 {
   font-style: italic;
 }

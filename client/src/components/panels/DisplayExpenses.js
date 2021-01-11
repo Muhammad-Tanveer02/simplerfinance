@@ -83,7 +83,9 @@ class ExpensesDisplay extends Component {
     this.setState({
       expenses: this.state.expenses.filter((el) => el._id !== expenseId),
     });
-    window.location.reload();
+    
+    document.getElementById('update-text').innerHTML='Please refresh to update totals.';//appear once user deletes an item
+
   }
 
   expenseDisplay() {
@@ -122,6 +124,7 @@ class ExpensesDisplay extends Component {
                 </h2>
               </div>
             </div>
+            <div id="update-text" className="update-text"></div>
             <table className="table table-striped">
               <thead className="thead-dark">
                 <tr>

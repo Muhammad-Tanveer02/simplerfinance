@@ -42,7 +42,9 @@ class BillsList extends Component {
     this.setState({
       bills: this.state.bills.filter((el) => el._id !== billId),
     });
-    window.location.reload();//refresed to complete deletion
+    
+    document.getElementById('update-text').innerHTML='Please refresh to update totals.';//appear once user deletes an item
+
   }
 
   billList() {
@@ -72,6 +74,7 @@ class BillsList extends Component {
                 <h2 className="lead text-center">is your Bill Total.</h2>
               </div>
             </div>
+            <div id="update-text" className="update-text"></div>
             <table className="table table-striped">
               <thead className="thead-dark">
                 <tr>
@@ -121,7 +124,6 @@ const Bills = (props) => (
       </Link>{" "}
       <p>
         <a
-          href="/bills"
           type="button"
           className="btn btn-danger btn-center"
           onClick={() => {

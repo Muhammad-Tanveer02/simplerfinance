@@ -35,12 +35,51 @@ class IncomeDisplay extends Component {
           if (this.state.income[i].incomeTerm === "One-Time") {
             thirtyFactor = 1;
             yearlyFactor = 1;
-          } else if (this.state.income[i].incomeTerm === "Hourly") {
-            thirtyFactor = 720; //720 hours in 30 days
-            yearlyFactor = 8760; //8760 hours in a year
-          } else if (this.state.income[i].incomeTerm === "Daily") {
-            thirtyFactor = 30; //30 days
-            yearlyFactor = 365; //365 days
+          } else if (this.state.income[i].incomeTerm === "Hourly (5 hours/week)") {
+            thirtyFactor = 20; //approximately 20 hours in 30 days
+            yearlyFactor = 240; //approximately 240 hours in a year
+          } else if (this.state.income[i].incomeTerm === "Hourly (10 hours/week)") {
+            thirtyFactor = 40; //approximately 40 hours in 30 days
+            yearlyFactor = 480; //approximately 480 hours in a year
+          } else if (this.state.income[i].incomeTerm === "Hourly (15 hours/week)") {
+            thirtyFactor = 60; //approximately 60 hours in 30 days
+            yearlyFactor = 720; //approximately 240 hours in a year
+          } else if (this.state.income[i].incomeTerm === "Hourly (20 hours/week)") {
+            thirtyFactor = 80; //approximately 80 hours in 30 days
+            yearlyFactor = 960; //approximately 960 hours in a year
+          } else if (this.state.income[i].incomeTerm === "Hourly (25 hours/week)") {
+            thirtyFactor = 100; //approximately 100 hours in 30 days
+            yearlyFactor = 1200; //approximately 240 hours in a year
+          } else if (this.state.income[i].incomeTerm === "Hourly (30 hours/week)") {
+            thirtyFactor = 120; //approximately 120 hours in 30 days
+            yearlyFactor = 1440; //approximately 1440 hours in a year
+          } else if (this.state.income[i].incomeTerm === "Hourly (35 hours/week)") {
+            thirtyFactor = 140; //approximately 140 hours in 30 days
+            yearlyFactor = 1680; //approximately 1680 hours in a year
+          } else if (this.state.income[i].incomeTerm === "Hourly (40 hours/week)") {
+            thirtyFactor = 160; //approximately 160 hours in 30 days
+            yearlyFactor = 1920; //approximately 1920 hours in a year
+          } else if (this.state.income[i].incomeTerm === "Daily (1 day/week)") {
+            thirtyFactor = 4; //4 days
+            yearlyFactor = 48; //48 days
+          } else if (this.state.income[i].incomeTerm === "Daily (2 days/week)") {
+            thirtyFactor = 8; //8 days
+            yearlyFactor = 96; //96 days
+          } else if (this.state.income[i].incomeTerm === "Daily (3 days/week)") {
+            thirtyFactor = 12; //12 days
+            yearlyFactor = 144; //144 days
+          } else if (this.state.income[i].incomeTerm === "Daily (4 days/week)") {
+            thirtyFactor = 16; //16 days
+            yearlyFactor = 198; //48 days
+          } else if (this.state.income[i].incomeTerm === "Daily (5 days/week)") {
+            thirtyFactor = 20; //20 days
+            yearlyFactor = 240; //240 days
+          } else if (this.state.income[i].incomeTerm === "Daily (6 days/week)") {
+            thirtyFactor = 24; //24 days
+            yearlyFactor = 288; //288 days
+          } else if (this.state.income[i].incomeTerm === "Daily (7 days/week)") {
+            thirtyFactor = 28; //28 days
+            yearlyFactor = 336; //336 days
           } else if (this.state.income[i].incomeTerm === "Weekly") {
             thirtyFactor = 4; //4 weeks in 30 days
             yearlyFactor = 52; //52 weeks in a year
@@ -83,7 +122,9 @@ class IncomeDisplay extends Component {
     this.setState({
       income: this.state.income.filter((el) => el._id !== incomeId),
     });
-    window.location.reload();
+
+    document.getElementById('update-text').innerHTML='Please refresh to update totals.';//appear once user deletes an item
+
   }
 
   incomeDisplay() {
@@ -122,6 +163,7 @@ class IncomeDisplay extends Component {
                 </h2>
               </div>
             </div>
+            <div id="update-text" className="update-text"></div>
             <table className="table table-striped">
               <thead className="thead-dark">
                 <tr>
@@ -167,7 +209,6 @@ const Income = (props) => (
       </Link>{" "}
       <p>
         <a
-          href="/income"
           type="button"
           className="btn btn-danger btn-center"
           onClick={() => {

@@ -19,7 +19,6 @@ export const registerUser = (userData, history) => (dispatch) => {
 
 // Login User
 export const loginUser = (userData) => (dispatch) => {
-  console.log("ggg")
   axios
     .post("/api/users/login", userData)
     .then((res) => {
