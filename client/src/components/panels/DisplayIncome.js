@@ -24,7 +24,6 @@ class IncomeDisplay extends Component {
     axios
       .get("https://simpler-finance-tanveer.herokuapp.com/api/income/")
       .then((response) => {
-        console.log(response.data);
         this.setState({ income: response.data });
         var i;
         var thirtyDayTotal = 0; //total income payment for the next 30 day period
@@ -43,13 +42,13 @@ class IncomeDisplay extends Component {
             yearlyFactor = 480; //approximately 480 hours in a year
           } else if (this.state.income[i].incomeTerm === "Hourly (15 hours/week)") {
             thirtyFactor = 60; //approximately 60 hours in 30 days
-            yearlyFactor = 720; //approximately 240 hours in a year
+            yearlyFactor = 720; //approximately 720 hours in a year
           } else if (this.state.income[i].incomeTerm === "Hourly (20 hours/week)") {
             thirtyFactor = 80; //approximately 80 hours in 30 days
             yearlyFactor = 960; //approximately 960 hours in a year
           } else if (this.state.income[i].incomeTerm === "Hourly (25 hours/week)") {
             thirtyFactor = 100; //approximately 100 hours in 30 days
-            yearlyFactor = 1200; //approximately 240 hours in a year
+            yearlyFactor = 1200; //approximately 1200 hours in a year
           } else if (this.state.income[i].incomeTerm === "Hourly (30 hours/week)") {
             thirtyFactor = 120; //approximately 120 hours in 30 days
             yearlyFactor = 1440; //approximately 1440 hours in a year
@@ -70,7 +69,7 @@ class IncomeDisplay extends Component {
             yearlyFactor = 144; //144 days
           } else if (this.state.income[i].incomeTerm === "Daily (4 days/week)") {
             thirtyFactor = 16; //16 days
-            yearlyFactor = 198; //48 days
+            yearlyFactor = 198; //198 days
           } else if (this.state.income[i].incomeTerm === "Daily (5 days/week)") {
             thirtyFactor = 20; //20 days
             yearlyFactor = 240; //240 days
@@ -113,20 +112,19 @@ class IncomeDisplay extends Component {
       });
   }
 
+  //function to delete inceom item
   deleteIncome(incomeId) {
     axios
       .delete("https://simpler-finance-tanveer.herokuapp.com/api/income/delete/" + incomeId)
-      .then((response) => {
-        console.log(response.data);
-      });
     this.setState({
       income: this.state.income.filter((el) => el._id !== incomeId),
     });
 
-    document.getElementById('update-text').innerHTML='Please refresh to update totals.';//appear once user deletes an item
+    document.getElementById('update-text').innerHTML='Please refresh to update totals.';//appears once user deletes an item
 
   }
 
+  //function to render each income item
   incomeDisplay() {
     return this.state.income.map((currentIncome) => {
       return (
@@ -141,7 +139,8 @@ class IncomeDisplay extends Component {
     });
   }
 
-  render(props) {
+  //renders income display
+  render() {
     return (
       <div className="container">
         <div className="row">
@@ -193,6 +192,7 @@ class IncomeDisplay extends Component {
   }
 }
 
+//renders each inceom item, including actions
 const Income = (props) => (
   <tr>
     <td className="text-center">{props.income.incomeSource}</td>

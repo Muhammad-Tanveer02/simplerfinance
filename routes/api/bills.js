@@ -15,7 +15,6 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     let email = req.user.email; //gets email of current logged in
-    console.log(email);
     Bill.find({ email: email }).then((bills) => res.json(bills)); //returns bills of user logged in
   }
 );

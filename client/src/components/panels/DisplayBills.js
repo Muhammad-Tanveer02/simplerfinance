@@ -19,7 +19,6 @@ class BillsList extends Component {
     axios
       .get("https://simpler-finance-tanveer.herokuapp.com/api/bills/")
       .then((response) => {
-        console.log(response.data);
         this.setState({ bills: response.data });
         var i;
         var total = 0;
@@ -36,9 +35,6 @@ class BillsList extends Component {
   deleteBill(billId) {
     axios
       .delete("https://simpler-finance-tanveer.herokuapp.com/api/bills/delete/" + billId)
-      .then((response) => {
-        console.log(response.data);
-      });
     this.setState({
       bills: this.state.bills.filter((el) => el._id !== billId),
     });

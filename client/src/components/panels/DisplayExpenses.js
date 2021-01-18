@@ -24,7 +24,6 @@ class ExpensesDisplay extends Component {
     axios
       .get("https://simpler-finance-tanveer.herokuapp.com/api/expenses/")
       .then((response) => {
-        console.log(response.data);
         this.setState({ expenses: response.data });
         var i;
         var thirtyDayTotal = 0; //total income payment for the next 30 day period
@@ -77,9 +76,6 @@ class ExpensesDisplay extends Component {
   deleteExpense(expenseId) {
     axios
       .delete("https://simpler-finance-tanveer.herokuapp.com/api/expenses/delete/" + expenseId)
-      .then((response) => {
-        console.log(response.data);
-      });
     this.setState({
       expenses: this.state.expenses.filter((el) => el._id !== expenseId),
     });
